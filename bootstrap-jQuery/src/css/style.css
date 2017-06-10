@@ -1,0 +1,9 @@
+.row{
+	margin-top: 20px;
+}
+
+.thumbnail{
+	height: 150px;
+	background: lightgrey;
+	margin-bottom: 0;
+}
