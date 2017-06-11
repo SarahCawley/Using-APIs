@@ -1,5 +1,5 @@
 # Site showing a 5 day weather forecast
-## uses bootstrap, jQuery, the open weather maps API, and the Google maps API
+## Uses bootstrap, jQuery, the open weather maps API, and the Google maps API
 
 
 #### For each city you search for a row will appear with the map of the city, the 5 day forecast, high and low temperatures for each day, and the icon associated with the given forecast.
