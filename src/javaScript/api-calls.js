@@ -41,11 +41,14 @@ $( document ).ready(function() {
 			trMarkup += "<iframe src=" + googleMapURL + "title='City map'></iframe></td>"
 
 						
-			//adds the weather icon and descrpition for each day
+			//adds the weather icon and description for each day
 			for(i=0; i<5; i++){
 				var weatherIcon = "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png ";
+				//convert temperature from kelvin to Fahrenheit
+				var maxTemp = Math.round(data.list[i].temp.max * (9/5) - 459.67);
+				var minTemp = Math.round(data.list[i].temp.min * (9/5) - 459.67);
 
-				trMarkup += "<td ><div class='thumbnail'><img src=" + weatherIcon +  "alt='Weather Icon' class='img-thumbnail'><div class='caption text-center'><h4>" + data.list[i].weather[0].description + "</h4></div></div></td>";
+				trMarkup += "<td ><div class='thumbnail'><img src=" + weatherIcon +  "alt='Weather Icon' class='img-thumbnail'><div class='caption text-center'><h4>" + data.list[i].weather[0].description + "</h4><div>High: " + maxTemp + "&#8457<br>Low: " + minTemp + "&#8457</div></div></td>";
 			}
 			// trMarkup += "</tr>"
 			$(".table").append(trMarkup + "</tr>");
